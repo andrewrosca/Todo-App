@@ -15,12 +15,12 @@ renderTodos(todos, filters)
 
 
 
-document.querySelector('#search-text').addEventListener('input', function(e) {
+document.querySelector('#search-text').addEventListener('input', (e) => {
     filters.searchText = e.target.value
     renderTodos(todos, filters)
 })
 
-document.querySelector('#todo-form').addEventListener('submit', function(e) {
+document.querySelector('#todo-form').addEventListener('submit', (e) => {
     e.preventDefault()
     const inputTodo = e.target.elements.enterTodo.value
     console.log('inputTodo' + inputTodo)
@@ -34,7 +34,7 @@ document.querySelector('#todo-form').addEventListener('submit', function(e) {
     e.target.elements.enterTodo.value = ''
 })
 
-document.querySelector('#hide-completed').addEventListener('change', function(e) {
+document.querySelector('#hide-completed').addEventListener('change', (e) => {
     filters.hideCompleted = e.target.checked  // set 
     renderTodos(todos, filters)
 })
